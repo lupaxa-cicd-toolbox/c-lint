@@ -6,7 +6,10 @@
 
 <h1 align="center">C Lint</h1>
 
-This repository ships a portable pipeline script for C sources and headers. It syntax-checks each `*.c` file with `gcc -fsyntax-only`, checks each `*.h` with `gcc -fsyntax-only -x c-header`, then runs `cppcheck` with `--error-exitcode=1` on every matched file under the scan root.
+This repository ships a portable pipeline script for C sources and headers.
+It syntax-checks each `*.c` file with `gcc -fsyntax-only`, and each `*.h`
+file with `gcc -fsyntax-only -x c-header`. It then runs `cppcheck` with
+`--error-exitcode=1` on every matched file under the scan root.
 
 Set `SCAN_ROOT` to point at the tree you want scanned (defaults to the current directory).
 
